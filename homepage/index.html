@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNow</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        h3{
+            text-align: center;
+        }
+        #container {
+            padding: 40px;
+        }
+        #nav{
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid green; */
+            height: 80px;
+            align-items: center;
+            /* width: 90%; */
+            margin: auto;
+
+        }
+        #nav > div{
+            width: 24%;
+        }
+        #logo > img{
+            width: 50%;
+            /* border: 1px solid; */
+            height: 100%;
+        }
+        #srch{
+            width: 50%;
+            /* border: 1px solid red; */
+            /* margin-top: 20px; */
+        }
+        #srch > input {
+            width: 100%;
+            padding: 10px;
+        } 
+        #nav button{
+            /* margin-top: 20px; */
+        }
+        a{
+            text-decoration: none;
+        }
+
+
+
+        #menu{
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid red;
+             margin-top: 20px;
+        }
+    #postertop{
+        background-color: red;
+        height: 100px;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h3>Shipping outside all around the worl</h3>
+
+    <div id="nav">
+        <div id="logo">
+            <img src="./logo.png"alt="">
+
+        </div>
+        <div id="srch">
+            <input type="text" id="Search" placeholder="Search for category">
+        </div>
+        <div id="logins">
+
+            <button id='lignin'><a href="./signin.html"> Signin</a>
+            </button>
+
+            <button id="store"><a href="https://www.nordstrom.com/stores?origin=tab&cm_re=SE_RE_A-_-SE_RE_B-_-SE_RE_C&cm_sp=SE_SP_A-_-SE_SP_B-_-SE_SP_C">STORE</a></button>
+
+            <button id="purchese"><a href="./purchese.html"> PURCHESE</a></button>
+            
+        </div>
+    </div>
+
+    <hr>
+
+   <div id="menu">
+
+    <h2 id="holidaygift"> <a href="./holidaygift.html">Holiday Gift</a></h2>
+    <h2 id="holidaydeal"><a href="./holidaygift.html">Holiday Deals</a></h2>
+    <h2 id="mens"><a href="./men.html">Mens</a></h2>
+    <h2 id=""><a href="./women.html">Women</a></h2>
+
+   </div>
+
+   <div class="poster" id="postertop">
+        <div></div>
+        <div></div>
+   </div>
+
+
+
+
+    </div>
+</body>
+</html>

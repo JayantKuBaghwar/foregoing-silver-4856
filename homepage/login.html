@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="">
+            <p>Email</p>
+            <input type="email" name="" id="email" placeholder="Your Register Email">
+            <p>Password</p>
+            <input type="password" name="" id="password" placeholder="Password">
+            <input type="submit" name="" id="">
+        </form>
+    </div>
+</body>
+</html>
+<script>
+let arr = JSON.parse(localStorage.getItem('signin'));
+let form = document.querySelector('form')
+let email = document.getElementById('email')
+let passsword = document.getElementById('password')
+
+form.addEventListener('submit',function(e){
+e.preventDefault();
+let Lobj = {
+    Lemail : email.value.trim(),
+    Lpassword : passsword.value.trim()
+}
+checkData(Lobj)
+
+})
+function checkData(obj){
+        let msg = "Invalid email or password" 
+        arr.forEach(function(el){
+            if(el.email == obj.email){
+                msg = "Login Successfull"
+            }
+console.log(el.email)
+console.log(obj.email)
+
+    });
+alert(msg);
+
+
+}  
+
+
+
+</script>
