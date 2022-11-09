@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNow Signin</title>
+    <style>
+        body{
+            /* background-color:rgb(246, 252, 251) ; */
+            margin: 0px;
+            padding: 0px;
+        }
+        #container{
+            width: 40%;
+            margin: auto;
+            /* border: 1px solid gold; */
+            /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+            padding: 40px 50px;
+            background-color: azure;
+            /* display: flex; */
+        }
+        input{
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        #btn{
+            width: 100%;
+            background: rgb(19, 180, 164) ;
+            border: 0px;
+            border-radius: 4%;
+            font-weight:bold ;
+            /* margin: auto; */
+            /* padding: 10%; */
+        }
+        #btn:hover{
+            background-color:  rgb(14, 237, 215) ;
+        }
+        h1{
+            color: rgb(19, 180, 164);
+
+        }
+        p{
+            font-weight: bold;
+        }
+        input{
+            border: 1px solid ;
+            background-color: azure;
+
+        }
+        input:focus{
+            border: 2px solid gold;
+            background-color: white;
+        }
+        button{
+            background-color: rgb(19, 180, 164);
+            border: 0px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 3%;
+            /* margin: auto; */
+        }
+        a{
+            text-decoration: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Signin |Creat Account</h1>
+        
+        <form action="" id="form">
+            <p>Name :</p>
+            <input type="text" name="" id="username" placeholder="Enter your name">
+            <p>Email ID :</p>
+            <input type="email" name="" id="email" placeholder="Enter email adress">
+            <p>Mobile Number :</p>
+            <input type="number" id="phone" placeholder="Enter mobile number ">
+            <p>Address :</p>
+            <input type="text" name="" id="adress" placeholder="Addresss">
+            <p>Password :</p>
+            <input type="password" name="" id="password" placeholder="Creat Password">
+            <p>Conform Password :</p>
+            <input type="password" name="" id="cpassword" placeholder="Conform Password">
+           
+           <input type="submit" value="Register" id="btn">
+        
+        </form>
+        <div>
+            <button><a href="./login.html">Go to login</a></button>
+        </div>
+       
+    </div>
+    
+    
+</body>
+</html>
+<script>
+    let arr = JSON.parse(localStorage.getItem('signin')) || [];
+let form = document.getElementById("form")
+let username = document.getElementById('username')
+let email = document.getElementById('email')
+let phone = document.getElementById('phone')
+let password = document.getElementById('password')
+let cpassword = document.getElementById('cpassword')
+let address = document.getElementById('address')
+
+
+form.addEventListener('submit',function(event){
+    event.preventDefault();
+
+    
+
+    let obj = {
+        username : username.value.trim(),
+        email : email.value.trim(),
+        phone : phone.value.trim(),
+        address : address.value.trim(),
+        password: password.value.trim(),
+        cpassword:cpassword.value.trim()
+    }
+    
+if(obj.email == "" || obj.username == "" || obj.phone.length < 10 || obj.password.length<4 || obj.password != obj.cpassword ){
+    alert('please fill all the data currectly')
+}else{
+    arr.push(obj);
+    localStorage.setItem('signin',JSON.stringify(arr));
+}
+   
+});
+
+
+
+
+</script>
