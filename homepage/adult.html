@@ -144,19 +144,19 @@
     <!-- men category -->
 <div id="men" class="mens">
     <div>
-        <h1>women:Get Inspired</h1>
+        <h1>Young Adult:Get Inspired</h1>
         <hr>
         <p>New Arrivals</p>
         <p>Holiday Deals</p>
         <p>Advance Morden</p>
         <p>Black Colection</p>
         <p>BestSellers</p>
-        <p>women's Looks</p>
+        <p>Adult's Looks</p>
     </div>
     <div>
-        <h1>Clothing</h1>
+        <h1>Women Clothing</h1>
         <hr>
-        <p onclick="Dress()">Dress</p>
+        <p onclick="WDress()">All</p>
         <p>Activewear</p>
         <p>Blazer & Sport Coart</p>
         <p>Coats & Jacket</p>
@@ -165,38 +165,39 @@
         <p>Longwear</p>
     </div>
     <div>
-        <h1>Shoes</h1>
+        <h1>Men Clothing</h1>
         <hr>
-        <p onclick="Shoes()">Shoes</p>
-        <p>Booties</p>
-        <p>Boots</p>
-        <p>Confort</p>
-        <p>Flat</p>
-        <p>Heels</p>
+        <p onclick="MDress()">All</p>
+        <p>Activewear</p>
+        <p>Blazer & Sport Coart</p>
+        <p>Coats & Jacket</p>
+        <p>Dress</p>
+        <p>Jeans</p>
+        <p>Pants</p>
     </div>
     <div>
-        <h1>HandBags</h1>
+        <h1>Gender Inclusive</h1>
         <hr>
-        <p >Backpacks</p>
-        <p>Belt Bags</p>
+        <p >Clothing</p>
+        <p>Accesories</p>
         <p>Clutches & Pourches</p>
-        <p>Crossbody Bag</p>
+        <p>Shoes</p>
         <p>Disigner Bags</p>
         <p>Hats</p>
     </div>
     <div>
-        <h1>Jewelry</h1>
+        <h1>Top Brand</h1>
         <hr>
-        <p >Bracelets</p>
-        <p>EarRings</p>
-        <h1>Fine Jewelry</h1>
+        <p >BDG Urban</p>
+        <p>Outfitters</p>
+        <h1>Accessories</h1>
         <hr>
-        <p>Wedding</p>
+        <p>Bags</p>
         <p>Experoence Fine Jewelry</p>
        
     </div>
     <div id="img">
-        <img  src="https://www.bing.com/th?id=OIP.p2QVdjNtAHwBH2arywilkAHaLv&w=150&h=238&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2">
+        <img  src="https://th.bing.com/th/id/OIP.Rz7N_pQGZWQbkgjUsIrZMwHaLg?w=200&h=311&c=7&r=0&o=5&dpr=1.3&pid=1.7">
     </div>
 
   
@@ -217,7 +218,7 @@ Display(arr)
 function Display(a){
     
     for(let i=0 ;i< arr.length ;i++){
-        if(a[i].for == "women"){
+        if(a[i].age == "A" ){
 
             let div = document.createElement('div')
         let img = document.createElement('img')
@@ -244,7 +245,7 @@ function Display(a){
         
     }
 }
-function Dress(){
+function WDress(){
 let arr = JSON.parse(localStorage.getItem('shopNow'))
 
     DisDress(arr)
@@ -254,7 +255,7 @@ function DisDress(a){
     let box = document.getElementById('All')
     box.innerHTML = "";
     for(let el of a){
-        if(el.category == "dress" && el.for == "women"){
+        if(el.age == "A" && el.for == "women"){
             
             let div = document.createElement('div')
         let img = document.createElement('img')
@@ -280,16 +281,17 @@ function DisDress(a){
     }
 }
 
-function Shoes(){
- arr = JSON.parse(localStorage.getItem('shopNow'))
+function MDress(){
+let arr = JSON.parse(localStorage.getItem('shopNow'))
 
-    DisShoes(arr)
+    DisDress(arr)
+
 }
-function DisShoes(a){
+function DisDress(a){
     let box = document.getElementById('All')
     box.innerHTML = "";
     for(let el of a){
-        if(el.category == "shoes" && el.for == "women"){
+        if(el.age == "A" && el.for == "men"){
             
             let div = document.createElement('div')
         let img = document.createElement('img')
@@ -313,10 +315,8 @@ function DisShoes(a){
 
         }
     }
-
-
-
 }
+
 
 
 

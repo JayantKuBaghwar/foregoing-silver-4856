@@ -18,7 +18,7 @@ let arr  = [
         category : "dress",
         for : "women",
         price : 6427,
-        description : 'Ab-Solution High Waist Itty Bitty Bootcut Jeans (Regular & Petite) (Nordstrom Exclusive)',
+        description : 'Ab-Solution High Waist Itty Bitty Bootcut Jeans (Regular & Petite)',
         rating : 4,
         age : 'A'
     },
@@ -91,7 +91,7 @@ let arr  = [
     {
         id :9,
         name : "pentu",
-        img : "https://rukminim1.flixcart.com/image/556/667/l0pm3680/kids-dress/h/b/f/5-6-years-dg001-smart-bazar-original-imagcf3rpn8hskza.jpeg?q=50",
+        img : "https://rukminim1.flixcart.com/image/556/667/k5y7tzk0/kids-dress/x/z/m/5-6-years-cc-10-catcub-original-imafzgznbghmynpg.jpeg?q=50",
         category : "dress",
         for : "women",
         price : 2699,
@@ -286,6 +286,17 @@ let arr  = [
         rating : 4.4,
         age : 'A'
     },
+    {
+        id :29,
+        name : "Mongolia",
+        img : "https://rukminim1.flixcart.com/image/556/667/xif0q/shoe/5/7/r/-original-imaghvbdbnggccqt.jpeg?q=50",
+        category : "shoes",
+        for : "men",
+        price : 5899,
+        description : 'Mongolia slim snakers for man',
+        rating : 4.1,
+        age : 'A'
+    },
 
 
 
@@ -297,16 +308,16 @@ let arr  = [
 
 ];
 
-localStorage.setItem("shopnow",JSON.stringify(arr));
-let data =JSON.parse(localStorage.getItem("shopnow"))
+localStorage.setItem("shopNow",JSON.stringify(arr));
+let data =JSON.parse(localStorage.getItem("shopNow"))
 
 for(let el of data){
     let div =document.createElement('div');
     let img =document.createElement('img')
     img.setAttribute('src',el.img)
     let h1 = document.createElement('h1')
-    h1.innerText = el.rating
-    div.append( h1)
+    h1.innerText = el.id
+    div.append( h1,img)
     document.querySelector('body').append(div)
 }
 

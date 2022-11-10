@@ -4,22 +4,234 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ShopNow login</title>
+    <style>
+        #l::first-letter{
+            color: red;
+        }
+        #l{
+            color: black;
+        }
+        
+
+        #nav{
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid green; */
+            height: 80px;
+            align-items: center;
+            width: 95%;
+            margin: auto;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+           
+            padding-left:20px ;
+            padding-right: 20px;
+            margin-top: 40px;
+           background-color: white;
+        }
+       
+       
+      
+        #srch {
+            width: 50%;
+            padding: 12px;
+            /* margin-top: 10px; */
+
+            /* border: 2px solid gold; */
+        } 
+        #nav input{
+            width: 100%;
+            padding:10px ;
+        }
+        #logins{
+            display: flex;
+        }
+        #logins > p{
+            margin: 10px;
+        }
+       
+        a{
+            text-decoration: none;
+        }
+
+
+
+
+
+
+        #c{
+            width: 50%;
+            margin: auto;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 30px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        input{
+            width: 100%;
+            padding-top:5px ;
+            padding-bottom: 5px;
+        }
+        #btn{
+            width: 50px;
+            padding: 5px;
+            font-weight: bold;
+            text-align: center;
+            border: 0px;
+            color: white;
+            background-color: rgb(47, 47, 224);
+            border-radius: 5%;
+        }
+
+
+
+
+
+
+
+
+        #bottom{
+            display: flex;
+        }
+        #bottom > div{
+            width: 15%;
+        }
+        #bot{
+            width: 25%;
+            display: flex;
+        }
+        #bot > img{
+            width: 20%;
+            height: 30px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        #menu{
+            display: flex;
+            justify-content: space-around;
+            /* border: 1px solid red; */
+             margin-top: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+        }
+
+       
+    </style>
 </head>
 <body>
-    <div>
+
+    <div id="nav">
+
+        <div id="logo">
+           <a href="./index.html"> <H1 id="l">SopeNow</H1></a>
+
+        </div>
+
+        <div id="srch">
+            <input type="text" id="Search" placeholder="Search for category">
+        </div>
+
+        <div id="logins">
+
+           <p><a href="./signin.html">Sign in</a></p>
+           <p><a href="">Store</a></p>
+           <p>Purchese</p>
+         <p> <a href="">Add to Card</a></p>
+            
+        </div>
+    </div>
+
+    <hr>
+
+   <div id="menu">
+
+    <p id="holidaygift"> <a href="./holidaygift.html">Holiday Gift</a></p>
+    <p id="holidaydeal"><a href="./holidaygift.html">Holiday Deals</a></p>
+    <p id="mens"><a href="./men.html">Men</a></p>
+    <p id=""><a href="./women.html">Women</a></p>
+    <p> <a href="./kid.html"> Kids</a></p>
+    <p> <a href="./adult.html">Young Adult</a></p>
+    <p>Activewear</p>
+    <p><a href="./index.html"> Home</a></p>
+    <p> <a href="./skin.html">Beauty</a></p>
+    <p>Designer</p>
+    <p>The Thread</p>
+
+   </div>
+
+    <div id="c">
         <form action="">
             <p>Email</p>
             <input type="email" name="" id="email" placeholder="Your Register Email">
             <p>Password</p>
-            <input type="password" name="" id="password" placeholder="Password">
-            <input type="submit" name="" id="">
+            <input type="password" name="" id="password" placeholder="Password"><br><br>
+            <input type="submit" name="" id="btn" value="Log In">
         </form>
     </div>
+    <div id="bottom">
+        <div>
+            <h4>Customer Service</h4>
+            <p>Contact us</p>
+            <p>Order Status</p>
+            <p>Shipping</p>
+            <p>Return Policy</p>
+            <p>Price Adjustment</p>
+            <p>Gift card</p>
+        </div>
+        <div>
+            <h4>About Us</h4>
+            <p>All Brand</p>
+            <p>Careers</p>
+            <p>Corporate Social</p>
+            <p>Get email</p>
+            <p>The Thread</p>
+            <p>Nordy Prdcast</p>
+        </div>
+        <div>
+            <h4>Store & Service</h4>
+            <p>Find Store</p>
+            <p>Free style help</p>
+            <p>Pop in Shop</p>
+            <p>Virtual Events</p>
+            <p>Spa Nordstome</p>
+            <p>NordStome resturant</p>
+        </div>
+        <div>
+            <h4>Nordstom card</h4>
+            <p>The Nody club</p>
+            <p>Pay My Bill</p>
+            <p>Manage My Nordstrom Card</p>
+            
+        </div>
+        <div>
+            <h4>Nordstom,Lnc</h4>
+            <p>Nordstrom Rack</p>
+            <p>Nordstrom Canada</p>
+            <p>Investor Relation</p>
+            <p>Press Releases</p>
+            <p>Nordstom Media Network</p>
+        </div>
+        <div id="bot">
+            <img src="https://th.bing.com/th/id/OIP.-ZirgQE5pr8e7htQWowJIgHaHa?w=203&h=203&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+            <img src="https://th.bing.com/th/id/OIP.IOlJ2wJrAUpUh6T1la8kxAHaEK?w=301&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+            <img src="https://th.bing.com/th/id/OIP.Ua5AXhtGRgPuisZVmetclQHaFL?w=261&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+            <img src="https://th.bing.com/th/id/OIP.bQFWLjAk0JQta4ZayBBRwAHaHa?w=174&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJCQsJCwsMCwsLDA0QDBEODQ4MEhkSJRodJR0ZHxwpKRYlNzU2GioyPi0pMBk7IRP/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCADqANYDASIAAhEBAxEB/8QAHAABAAIDAQEBAAAAAAAAAAAAAAUHAQMGCAIE/8QAPhABAAEDAgMCCQkHBQEAAAAAAAECAwQGEQVRkSGTEhYxNkFVYXSyExQzQoGhwtPhJDI0VHOz0hUiI1JxYv/EABcBAQEBAQAAAAAAAAAAAAAAAAACAQP/xAAZEQEBAAMBAAAAAAAAAAAAAAAAAQIREjH/2gAMAwEAAhEDEQA/ALbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGrJyLGJj5OVfriixjWrl+9VP1bdumaqpUdx7V/HON3r0RkXsXh81bWcOxcminwIneJvVUbTVV5JneduUNk2y1e32SfZLzX85y/5nJ767/kfOcv+Zye+u/5N5Zt6U+yR5r+c5f8AM5PfXf8AJO8C1fxzgd6zvfvZXD6Z2vYd+ua4+T33n5CquZmmr0x27c45OTa9xpxsjHzMfGyseuK7GTZtX7NcfWt3KYrpn725KgAAAAAAAAAAAAAAAAAAAEBrGZp0xqGYmYn5nVHZymqmJhQvNfOsvNfUPun46VDc14+JoApgekPSC+NFTNWldNTMzM/MLcdvKKqoh0LndE+ammvcaPjqdE5LAAAAAAAAAAAAAAAAAAAAQGs/NfUPun46VC8186y819Q+6fjpUNzXj4mgCmB6Q9IL30T5qaa9xo+Kp0TndE+ammvcaPiqdE5LAAAAAAAAAAAAAABrv38bGtV38m9as2bcb13b9dNu3TH/ANVVTEIedW6PiZieN8P3idp2vRMdYBOCC8b9Heu8Dvf0PG/R3rvA739ATogvG/R3rvA739Dxv0d67wO9/QHzrLzX1D7p+OlQvNceqdS6YzdPcbxcXi2HeyL2N4Fq1bub111eHTO1MbKc5rx8TQBTA9IekF76J81NNe40fFU6Jw+lNSaZwdOcBxMvi2HZybGHRRetXLm1dFXhVT4NUbeVN+N+jvXeB3v6Oelp0QXjfo713gd7+h436O9d4He/owTogvG/R3rvA739GY1bo+qYiON8P3mYiN70RHWewE4NVjIxsm1Rfxr1q9Zrjei5YrpuW6v/ACqiZhtAAAAA2NgA2NgBROr+P5HHOK5URdqnh+JeuWMG1EzFvwaJmib00/8AartnfbybR6HOdrZf+nyf69746mt0RTtO0Gh2naAHaAAAAAB2naAHadoAdp2gDotJcfyOBcVxd7sxw7Mv2rGdamZm3FNyqKIvRT/2pmYnflvH/l7vNFv6XG94xv7tL0ujJsNjYEqNgAAADkAPNV/6fJ/r3vjqa2y/9Pk/173x1NbqgAAAAAAAAAAAAAAAB9W/pcb3jG/u0vS7zRb+lxveMb+7S9LoybABKgAAAAAFCas4Hf4FxfLtTbmnCyrty/w+52zRXarmavk/Cn61HkmPZv6UDt7HpHLwsHPsV42bjWMjHr/etX6KblEzz2qjyoOdC6GmZmeC428zv2XMiI+yIubK6TpRW3sNvYvTxE0N6lx+9yfzDxE0N6lx+9yfzG9Q0ovb2G3sXp4iaG9S4/e5P5h4iaG9S4/e5P5h1DSixbmptI6S4fwHjWbh8KsWcrHxprs3aa781UVeFTG8RVXMfcqPm2XbLABoAekDY29i2tLaR0lxHT3A83N4XZvZWTiU3L92u5fiquuaqo3mKa4j7k14iaG9S4/e5P5ieo3Si9vYbexeniJob1Lj97k/mHiJob1Lj97k/mHUNKL29htPJeniJob1Lj97k/mEaF0NExP+i43ZzuZEx9sTc2OoaVPpXgd/j/F8SzTbqqwsW/ayeJXu2LdFq3VFcWvCj69cxERHl23n0L9fnxMLBwLFGNhY1jGx6P3bWPbpt0RPPamPK/Qm3bYAMaAAdDoAHQ6AB0OgAdDoAHQ6ACA1n5r6h90/HSoXmvnWXmvqH3T8dKhua8fE0AUwPSHpBe+ifNTTXk/gaPiqdF0c7onzU017jR8VTonJZ0OgAdDoAHQ6AB0Z6MAHQADodAA6HQAOh0ADodAA6HQAQGs/NfUPun46VC819ay819Q+6fjpULzXj4mgCmB6Q9IL30T5qaa8n8DR8VToujndE+ammvcaPiqdE5LOh0ADodAA6HQAOjPRgA6AAAAAAAAAAAAgNZRM6X1Dt2/scz2corpmVC83pPLxrGbi5WJkU+FYyrN2xdpjsmaLlM0ztPPkofj2meM8Av3qb9i7dwoq/wCHOtW6qrNdEztHyk0xPg1c4nb2bqxqahBjwqef3SeFTz+6VsZPSx4VPP7pTXAtM8a1DftUY1i9Zwqqo+Xz7tuqizbt7/7ptTVEeFVyiPt2YLe0TExpTTW/Z+wW57eU1VTDomjExcfBxcTDx6fAsYti1j2afLtbt0xRTvP2N7msAAAAAAAAAAAAAAAAAAAAYZAY2jlHSDaOUdIZAY2jlHSBkAAAAAAAAAAAAA3NwA3NwA3NwA3NwA3NwA3NwA3NwA3NwA3NwA3NwA3NwA3NwA3NwA3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//Z" alt="">
+
+            
+        </div>
+       
+    </div>
+
 </body>
 </html>
 <script>
-let arr = JSON.parse(localStorage.getItem('signin'));
+let arr = JSON.parse(localStorage.getItem('userData'));
+console.log(arr)
 let form = document.querySelector('form')
 let email = document.getElementById('email')
 let passsword = document.getElementById('password')
@@ -34,19 +246,20 @@ checkData(Lobj)
 
 })
 function checkData(obj){
-        let msg = "Invalid email or password" 
-        arr.forEach(function(el){
-            if(el.email == obj.email){
-                msg = "Login Successfull"
-            }
-console.log(el.email)
-console.log(obj.email)
+   let alt     
+for(let el of arr){
+    if(el.email == obj.Lemail && obj.Lpassword.length > 4){
+        alt = "Log In SuccessFull"
+    }else{
+        alt = "Invalid email or Password"
+    }
+}
+    alert(alt)
+    };
 
-    });
-alert(msg);
 
 
-}  
+
 
 
 
