@@ -7,17 +7,68 @@
     <title>ShopNow Signin</title>
     <style>
         body{
+            background-color: azure;
             /* background-color:rgb(246, 252, 251) ; */
             margin: 0px;
             padding: 0px;
         }
+        #l::first-letter{
+            color: red;
+        }
+        #l{
+            color: black;
+        }
+        
+
+        #nav{
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid green; */
+            height: 80px;
+            align-items: center;
+            width: 95%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            padding-left:20px ;
+            padding-right: 20px;
+            margin-top: 40px;
+           background-color: white;
+        }
+       
+       
+      
+        #srch {
+            width: 50%;
+            padding: 12px;
+            /* margin-top: 10px; */
+
+            /* border: 2px solid gold; */
+        } 
+        #nav input{
+            width: 100%;
+            padding:10px ;
+        }
+        #logins{
+            display: flex;
+        }
+        #logins > p{
+            margin: 10px;
+        }
+       
+        a{
+            text-decoration: none;
+        }
+
+
+
+
         #container{
-            width: 40%;
+            width: 50%;
             margin: auto;
             /* border: 1px solid gold; */
-            /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
             padding: 40px 50px;
-            background-color: azure;
+            margin-top: 50px;
             /* display: flex; */
         }
         input{
@@ -44,7 +95,7 @@
         p{
             font-weight: bold;
         }
-        input{
+     #container > input{
             border: 1px solid ;
             background-color: azure;
 
@@ -63,12 +114,43 @@
         }
         a{
             text-decoration: none;
+        } 
+        .m{
+            text-align: center;
+            color: black;
         }
 
 
     </style>
 </head>
 <body>
+
+    <div id="nav">
+
+        <div id="logo">
+           <a href="./index.html"> <H1 id="l">SopeNow</H1></a>
+
+        </div>
+
+        <div id="srch">
+            <input type="text" id="Search" placeholder="Search for category">
+        </div>
+
+        <div id="logins">
+
+           <p><a href="./signin.html">Sign in</a></p>
+           <p><a href="">Store</a></p>
+           <p>Purchese</p>
+         <p> <a href="">Add to Card</a></p>
+            
+        </div>
+    </div>
+
+
+    <h1 class="m">Well Come to ShopNow</h1>
+    <p class="m">Please fill all the details</p>
+
+
     <div id="container">
         <h1>Signin |Creat Account</h1>
         
@@ -80,7 +162,7 @@
             <p>Mobile Number :</p>
             <input type="number" id="phone" placeholder="Enter mobile number ">
             <p>Address :</p>
-            <input type="text" name="" id="adress" placeholder="Addresss">
+            <input type="text" name="" id="address" placeholder="Addresss">
             <p>Password :</p>
             <input type="password" name="" id="password" placeholder="Creat Password">
             <p>Conform Password :</p>
@@ -99,7 +181,7 @@
 </body>
 </html>
 <script>
-    let arr = JSON.parse(localStorage.getItem('signin')) || [];
+    let arr = JSON.parse(localStorage.getItem('userData')) || [];
 let form = document.getElementById("form")
 let username = document.getElementById('username')
 let email = document.getElementById('email')
@@ -127,7 +209,7 @@ if(obj.email == "" || obj.username == "" || obj.phone.length < 10 || obj.passwor
     alert('please fill all the data currectly')
 }else{
     arr.push(obj);
-    localStorage.setItem('signin',JSON.stringify(arr));
+    localStorage.setItem('userData',JSON.stringify(arr));
 }
    
 });

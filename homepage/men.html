@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopeNow Men</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            width: 96%;
+            /* border: 1px solid gold; */
+            margin: auto;
+        }
+
+        #l::first-letter{
+            color: red;
+        }
+        #l{
+            color: black;
+        }
+        h3{
+            text-align: center;
+        }
+        
+        #nav{
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid green; */
+            height: 80px;
+            align-items: center;
+            width: 97%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            padding-left: 20px;
+            padding-right:20px ;
+
+        }
+        #srch {
+            width: 50%;
+            padding: 12px;
+            /* border: 2px solid gold; */
+        } 
+        #nav input{
+            width: 100%;
+            padding:10px ;
+        }
+        #logins{
+            display: flex;
+        }
+        #logins > p{
+            margin: 10px;
+        }
+       
+        a{
+            text-decoration: none;
+        }
+        /* men bar css */
+        #menu{
+            display: flex;
+            justify-content: space-around;
+            /* border: 1px solid red; */
+             margin-top: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+        }
+        .mens{
+            display: flex;
+            justify-content: space-evenly;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+     
+      #img {
+        width: 24%;
+      }
+      #img > img{
+        margin-top: 20px;
+      }
+
+      #All{
+        margin-top:200px ;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+        width: 100%;
+        margin:50px auto;   
+      }
+      #All >  div >img  {
+        width: 50%;
+      }
+      #All > div {
+        padding: 20px;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+        
+
+
+    </style>
+
+</head>
+<body>
+    <div id="nav">
+
+        <div id="logo">
+           <a href="./index.html"> <H1 id="l">SopeNow</H1></a>
+
+        </div>
+
+        <div id="srch">
+            <input type="text" id="Search" placeholder="Search for category">
+        </div>
+
+        <div id="logins">
+
+           <p><a href="./signin.html">Sign in</a></p>
+           <p><a href="">Store</a></p>
+           <p>Purchese</p>
+         <p> <a href="">Add to Card</a></p>
+            
+        </div>
+    </div>
+
+    <hr>
+
+   <div id="menu">
+
+    <p id="holidaygift"> <a href="./holidaygift.html">Holiday Gift</a></p>
+    <p id="holidaydeal"><a href="./holidaygift.html">Holiday Deals</a></p>
+    <p id="mens"><a href="./men.html">Men</a></p>
+    <p id=""><a href="./women.html">Women</a></p>
+    <p> <a href="./kid.html"> Kids</a></p>
+    <p> <a href="./adult.html">Young Adult</a></p>
+    <p>Activewear</p>
+    <p><a href="./index.html"> Home</a></p>
+    <p> <a href="./skin.html">Beauty</a></p>
+    <p>Designer</p>
+    <p>The Thread</p>
+
+   </div>
+
+
+    <!-- men category -->
+<div id="men" class="mens">
+    <div>
+        <h1>Men:Get Inspired</h1>
+        <hr>
+        <p>New Arrivals</p>
+        <p>Holiday Deals</p>
+        <p>Advance Morden</p>
+        <p>Black Colection</p>
+        <p>BestSellers</p>
+        <p>Men's Looks</p>
+    </div>
+    <div>
+        <h1>Clothing</h1>
+        <hr>
+        <p onclick="Dress()">Dress</p>
+        <p>Activewear</p>
+        <p>Blazer & Sport Coart</p>
+        <p>Coats & Jacket</p>
+        <p>Dress</p>
+        <p>Jeans</p>
+        <p>Pants</p>
+    </div>
+    <div>
+        <h1>Shoes</h1>
+        <hr>
+        <p onclick="Shoes()">Shoes</p>
+        <p>Blazer & Sport Coart</p>
+        <p>Coats & Jacket</p>
+        <p>Dress</p>
+        <p>Jeans</p>
+        <p>Pants</p>
+    </div>
+    <div>
+        <h1>Accessories</h1>
+        <hr>
+        <p >Backpacks</p>
+        <p>Bags</p>
+        <p>Belt</p>
+        <p>Dopp Kits</p>
+        <p>Gloves</p>
+        <p>Hats</p>
+    </div>
+    <div>
+        <h1>Designer</h1>
+        <hr>
+        <p >Designer Cloting</p>
+        <p>Designer Accessories</p>
+        <h1>Top Brand</h1>
+        <hr>
+        <p>AG</p>
+        <p>AllSaints</p>
+        <p>ASOS</p>
+    </div>
+    <div id="img">
+        <img  src="https://th.bing.com/th/id/OIP.s9MMF1hLG8idQwCVkae_AgHaJj?w=203&h=261&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+    </div>
+
+  
+
+</div>
+  <!-- displaymens -->
+  <div id="All"></div>
+
+   
+</body>
+</html>
+<script>
+
+let arr = JSON.parse(localStorage.getItem('shopNow'))
+
+Display(arr)
+
+function Display(a){
+    
+    for(let i=0 ;i< arr.length ;i++){
+        if(a[i].for == "men"){
+
+            let div = document.createElement('div')
+        let img = document.createElement('img')
+            img.setAttribute('src',a[i].img)
+
+        let name = document.createElement('h2')
+            name.innerText = a[i].name
+        let des = document.createElement('p')
+            des.innerText = a[i].description
+
+        let price = document.createElement('p')
+            price.innerText = a[i].price
+
+        let rating = document.createElement('p')
+            rating.innerText = a[i].rating
+    
+        let box = document.getElementById('All')
+        
+        div.append(img,name,des,price,rating)
+        box.append(div)
+
+        }
+        
+        
+    }
+}
+function Dress(){
+let arr = JSON.parse(localStorage.getItem('shopNow'))
+
+    DisDress(arr)
+
+}
+function DisDress(a){
+    let box = document.getElementById('All')
+    box.innerHTML = "";
+    for(let el of a){
+        if(el.category == "dress" && el.for == "men"){
+            
+            let div = document.createElement('div')
+        let img = document.createElement('img')
+            img.setAttribute('src',el.img)
+
+        let name = document.createElement('h2')
+            name.innerText = el.name
+        let des = document.createElement('p')
+            des.innerText = el.description
+
+        let price = document.createElement('p')
+            price.innerText = el.price
+
+        let rating = document.createElement('p')
+            rating.innerText = el.rating
+    
+       
+        
+        div.append(img,name,des,price,rating)
+        box.append(div)
+
+        }
+    }
+}
+
+function Shoes(){
+ arr = JSON.parse(localStorage.getItem('shopNow'))
+
+    DisShoes(arr)
+}
+function DisShoes(a){
+    let box = document.getElementById('All')
+    box.innerHTML = "";
+    for(let el of a){
+        if(el.category == "shoes" && el.for == "men"){
+            
+            let div = document.createElement('div')
+        let img = document.createElement('img')
+            img.setAttribute('src',el.img)
+
+        let name = document.createElement('h2')
+            name.innerText = el.name
+        let des = document.createElement('p')
+            des.innerText = el.description
+
+        let price = document.createElement('p')
+            price.innerText = el.price
+
+        let rating = document.createElement('p')
+            rating.innerText = el.rating
+    
+       
+        
+        div.append(img,name,des,price,rating)
+        box.append(div)
+
+        }
+    }
+
+
+
+}
+
+
+
+</script>
