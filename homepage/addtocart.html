@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add To Cart</title>
+    <style>
+
+  body{
+            margin: 0px;
+            padding: 0px;
+            width: 96%;
+            border: 1px solid gold;
+            margin: auto;
+        }
+
+        #l::first-letter{
+            color: red;
+        }
+        #l{
+            color: black;
+        }
+        h3{
+            text-align: center;
+        }
+        
+        #nav{
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid green; */
+            height: 80px;
+            align-items: center;
+            width: 97%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            padding-left: 20px;
+            padding-right:20px ;
+
+        }    
+        #srch {
+            width: 50%;
+            padding: 12px;
+            /* border: 2px solid gold; */
+        } 
+        #nav input{
+            width: 100%;
+            padding:10px ;
+        }
+        #logins{
+            display: flex;
+        }
+        #logins > p{
+            margin: 10px;
+        }
+       
+        a{
+            text-decoration: none;
+        }
+
+                            /* manu bar */
+
+        #menu{
+            display: flex;
+            justify-content: space-around;
+            /* border: 1px solid red; */
+             margin-top: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+        }
+
+                        /* manu bar end */
+        #ADD{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        #ADD > div {
+            /* border: 1px solid gray; */
+            display: flex;
+            /* justify-content: space-evenly; */
+            width: 50%;
+            padding: 20px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        }
+        #Cdiv{
+            /* border: 1px solid red; */
+            margin-left: 10px;
+            text-align: center;
+        }
+        #ADD  button{
+            /* height: 20px; */
+            background-color:rgb(174, 153, 115);
+            padding: 10px;
+            border: 0px;
+            font-weight: 900;
+            border-radius:30% ;
+        }
+        #dis{
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid red;
+        }
+        #dis > div{
+            width: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+
+        <div id="logo">
+           <a href="./index.html"> <H1 id="l">SopeNow</H1></a>
+
+        </div>
+
+        <div id="srch">
+            <input type="text" id="Search" placeholder="Search for category" oninput="Search()">
+        </div>
+
+        <div id="logins">
+
+           <p><a href="./signin.html">Sign in</a></p>
+           <p><a href="">Store</a></p>
+           <p>Purchese</p>
+         <p> <a href="./addtocart.html">Add to Card</a></p>
+            
+        </div>
+    </div>
+
+    <hr>
+
+   <div id="menu">
+
+    <p id="holidaygift"> <a href="./holidaygift.html">Holiday Gift</a></p>
+    <p id="holidaydeal"><a href="./holidaygift.html">Holiday Deals</a></p>
+    <p id="mens"><a href="./men.html">Men</a></p>
+    <p id=""><a href="./women.html">Women</a></p>
+    <p> <a href="./kid.html"> Kids</a></p>
+    <p> <a href="./adult.html">Young Adult</a></p>
+    <p>Activewear</p>
+    <p><a href="./index.html"> Home</a></p>
+    <p> <a href="./skin.html">Beauty</a></p>
+    <p>Designer</p>
+    <p><a href="./details.html">Details</a></p>
+
+   </div>
+   <div id="dis">
+    <div id="ADD"></div>
+    <div id="det">
+        
+    </div>
+   </div>
+   
+</body>
+</html>
+<script>
+    let cart = JSON.parse(localStorage.getItem('Cart')) || []
+    
+    
+    DisplayCart(cart)
+    function DisplayCart(a){
+        let count = 0;
+        
+        document.getElementById('det').innerHTML=""
+        let box = document.getElementById('ADD')
+        box.innerHTML = "";
+        a.forEach(function(el,index) {
+            
+                count++
+            let div = document.createElement('div')
+            let Cdiv = document.createElement('div')
+                Cdiv.setAttribute('ID','Cdiv')
+
+        let img = document.createElement('img')
+            img.setAttribute('src',el.img)
+        let name = document.createElement('h4')
+            name.innerText = el.name
+
+        let des = document.createElement('h4')
+            des.innerText = el.description
+        let cat = document.createElement('p')
+            cat.innerText = el.category
+        let price = document.createElement('p')
+            price.innerText = el.price
+        let rt = document.createElement('p')
+            rt.innerText = el.rating
+        let fm = document.createElement('p')
+        fm.innerText = el.for
+        let age = document.createElement('p')
+            age.innerText = el.age
+        let add = document.createElement('button')
+            add.innerText = "-"
+            add.addEventListener('click',function(){
+                Delete(index)
+            })
+        let puls = document.createElement('button')
+            puls.innerText = "+"
+            puls.addEventListener('click',function(){
+                count++
+                
+            })
+
+            Cdiv.append(name,des,price,rt,fm,age,puls,add)
+            div.append(img,Cdiv)
+            box.append(div)
+            
+        });
+        let h1 = document.createElement('h1')
+            h1.innerText = "Well Come to Add to Cart"
+        let product = document.createElement('p')
+            product.innerText="Total Number Of product :"+ count;
+        let p = document.createElement('h2')
+            p.setAttribute('id','pr')
+            p.innerText="Total cost Rs:"
+        document.getElementById('det').append(h1,product,p)
+       
+    }
+    let cost = cart.reduce(function(acc,el){
+        return acc+ Number(el.price)
+    },0)
+    console.log(cost)
+    document.getElementById('pr').innerText = "Total cost Rs:"+cost;
+
+    
+    function Delete(index){
+    cart.splice(index,1)
+        DisplayCart(cart)
+            
+        }
+
+</script>
