@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopeNow Gifts</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            width: 96%;
+            /* border: 1px solid gold; */
+            margin: auto;
+        }
+
+        #l::first-letter{
+            color: red;
+        }
+        #l{
+            color: black;
+        }
+        h3{
+            text-align: center;
+        }
+        
+        #nav{
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid green; */
+            height: 80px;
+            align-items: center;
+            width: 97%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            padding-left: 20px;
+            padding-right:20px ;
+
+        }
+        #srch {
+            width: 50%;
+            padding: 12px;
+            /* border: 2px solid gold; */
+        } 
+        #nav input{
+            width: 100%;
+            padding:10px ;
+        }
+        #logins{
+            display: flex;
+        }
+        #logins > p{
+            margin: 10px;
+        }
+       
+        a{
+            text-decoration: none;
+        }
+        /* men bar css */
+        #menu{
+            display: flex;
+            justify-content: space-around;
+            /* border: 1px solid red; */
+             margin-top: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+        }
+        .mens{
+            display: flex;
+            justify-content: space-evenly;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+     
+      #img {
+        width: 24%;
+        margin-top: 50px;
+        margin-left: 50px;
+      }
+      #img > img{
+        margin-top: 20px;
+      }
+
+      #All{
+        margin-top:200px ;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+        width: 100%;
+        margin:50px auto;   
+      }
+      #All >  div >img  {
+        width: 50%;
+        /* margin-top: 30px; */
+      }
+      #All > div {
+        padding: 20px;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+        
+
+
+    </style>
+
+</head>
+<body>
+    <div id="nav">
+
+        <div id="logo">
+           <a href="./index.html"> <H1 id="l">SopeNow</H1></a>
+
+        </div>
+
+        <div id="srch">
+            <input type="text" id="Search" placeholder="Search for category">
+        </div>
+
+        <div id="logins">
+
+           <p><a href="./signin.html">Sign in</a></p>
+           <p><a href="">Store</a></p>
+           <p>Purchese</p>
+         <p> <a href="">Add to Card</a></p>
+            
+        </div>
+    </div>
+
+    <hr>
+
+   <div id="menu">
+
+    <p id="holidaygift"> <a href="./holidaygift.html">Holiday Gift</a></p>
+    <p id="holidaydeal"><a href="./holidaygift.html">Holiday Deals</a></p>
+    <p id="mens"><a href="./men.html">Men</a></p>
+    <p id=""><a href="./women.html">Women</a></p>
+    <p> <a href="./kid.html"> Kids</a></p>
+    <p> <a href="./adult.html">Young Adult</a></p>
+    <p>Activewear</p>
+    <p><a href="./index.html"> Home</a></p>
+    <p> <a href="./skin.html">Beauty</a></p>
+    <p>Designer</p>
+    <p><a href="./details.html">Details</a></p>
+
+
+   </div>
+
+
+    <!-- men category -->
+<div id="men" class="mens">
+    <div>
+        <h1>Holyday Gifts:Get Inspired</h1>
+        <hr>
+        <p>Holiday Decore</p>
+        <p>Holiday Deals</p>
+        <p>Stocking Stuffers</p>
+        <p>Black Colection</p>
+        <p>Beauty Gifts</p>
+        <p>Toys & Games</p>
+    </div>
+    <div>
+        <h1>Gifts By Price</h1>
+        <hr>
+        <p>Gifts under $50</p>
+        <p>Gifts under $100</p>
+        <p>luxe Gifts</p>
+        
+    </div>
+    <div>
+        <h1>All Gifts</h1>
+        <hr>
+        <p>Gifts for Her</p>
+        <p>Gifts for Him</p>
+        <p>Gifts For Kids</p>
+        <p>Gifts for Babys</p>
+        <p>Gifts for Pets</p>
+        <p>Gifts for the home</p>
+    </div>
+    <div>
+        <h1>Gift by Recipient</h1>
+        <hr>
+        <p >For the Party Host</p>
+        <p>For the Foodies</p>
+        <p>For the Jewelry Lover</p>
+        <p>For the Advanture</p>
+        <p>For the Techie</p>
+        <p>For the Sport Fan</p>
+    </div>
+    <div>
+        <h1>Holiday Helps</h1>
+        <hr>
+        <p >Free Pickups</p>
+        <p>Gift Card</p>
+        <p>Style Help</p>
+        <h1>Gifts Guides</h1>
+        <hr>
+        <p>Cozy Gifts Ideas</p>
+        <p>Gifts For Coffee Lovers</p>
+        <p>Gifts for Dogs Lovers</p>
+    </div>
+    <div id="img">
+        <img width="50%" height="50%" src="https://th.bing.com/th/id/R.efaf8c0eb62347b210fd08b3a7f80da6?rik=sFBHkm%2beAdqf4A&riu=http%3a%2f%2fwww.theworldforexclub.com%2fwp-content%2fuploads%2f2015%2f08%2ffreegift-e1440672939844.png&ehk=%2f64E3Am8lwZvyURXkd9rT9Rl7k1p%2brlcGYQJC2q4gvI%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1">
+    </div>
+
+  
+
+</div>
+  <!-- displaymens -->
+  <div id="All"></div>
+
+   
+</body>
+</html>
