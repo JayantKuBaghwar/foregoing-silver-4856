@@ -75,7 +75,6 @@
             grid-template-columns: repeat(4,1fr);
             gap: 30px;
             /* height: 100vh; */
-            border: 5px solid green;
         }
         #view > div {
             /* width: 40%; */
@@ -85,7 +84,6 @@
             text-align: center;
         }
         #view > div > img {
-            border: 10px solid red;
             width:90% ;
             height: 50%;
         }        
@@ -140,11 +138,12 @@
 </html>
 <script>
     let arr = JSON.parse(localStorage.getItem("details")) || []
+    let cartArr = JSON.parse(localStorage.getItem("Cart")) || []
+
      Display(arr)
     function Display(a){
 
 
-    let cartArr = JSON.parse(localStorage.getItem("Cart")) || []
 
         let box = document.getElementById('view')
         box.innerHTML = ""
@@ -194,6 +193,8 @@
 
         function Delete(i){
             arr.splice(i,1)
+            // localStorage.setItem('Cart',JSON.stringify(cartArr))
+
             Display(arr)
         }
 
