@@ -211,6 +211,7 @@ if(obj.email == "" || obj.username == "" || obj.phone.length < 10 || obj.passwor
 }else{
     arr.push(obj);
     localStorage.setItem('userData',JSON.stringify(arr));
+    alert('sign in successful')
 }
    
 });
